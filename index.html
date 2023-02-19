@@ -19,19 +19,27 @@
 			<div class="col-12 col-md-7">
 				<h1 id="title" class="text-light mt-5 mb-5">Customer Survey Form</h1>
 				<p id="description" class="text-light mb-5">Thank you for shopping with us. Please take time and help us in improving our store and service.</p>
-				<form id="survey-form" action="mailto:contact@nowenastore.com">
+				<form id="survey-form" action="mailto:contact@nowenastore.com" method="POST">
 					<fieldset>
-						<label id="name-label" for="name">Name <input id="name" name="name" type="text" placeholder="Your name here" required=""></label> <label id="email-label" for="email">Email <input id="email" name="email" type="email" placeholder="email@sample.com" required=""></label> <label id="number-label" for="number">Age <input id="number" name="age" type="number" placeholder="18 and up only" min="18" max="120" required=""></label>
-						<p>Gender</p>
-						<label for="male">
-							<input id="male" name="gender" type="radio" value="male" class="selection"> Male
-						</label>
-						<label for="female">
-							<input id="female" name="gender" type="radio" value="female" class="selection"> Female
-						</label>
-						<label for="i-rather-not-say">
-							<input id="i-rather-not-say" name="gender" type="radio" value="i-rather-not-say" class="selection"> I rather not say
-						</label>
+						<label id="name-label" for="name">Name</label> <br>
+						<input id="name" name="name" type="text" placeholder="Your name here" required class="w-100"> <br>
+						
+						<label id="email-label" for="email">Email</label> <br>
+						<input id="email" name="email" type="email" placeholder="email@sample.com" required class="w-100"> <br>
+						
+						<label id="number-label" for="number">Age</label> <br>
+						<input id="number" name="age" type="number" placeholder="18 and up only" min="18" max="120" required class="w-100">
+						
+						<p class="mt-4">Gender</p>
+						
+						<input id="male" name="gender" type="radio" value="male" class="selection">
+						<label for="male">Male</label>
+						
+						<input id="female" name="gender" type="radio" value="female" class="selection">
+						<label for="female">Female</label>
+
+						<input id="i-rather-not-say" name="gender" type="radio" value="i-rather-not-say" class="selection">
+						<label for="i-rather-not-say">I rather not say</label>
 					</fieldset>
 					<fieldset>
 						<p>Would you recommend our store a friend?</p>
@@ -79,7 +87,7 @@
 							<textarea id="suggestions" name="suggestions" rows="3" cols="50" placeholder="enter your comments here..."></textarea>
 						</label>
 					</fieldset>
-					<button id="submit" type="submit">Submit</button>
+					<button id="submit" type="submit" onclick="showSuccessMessage()">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -87,5 +95,6 @@
 
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="./index.js"></script>
 </body>
 </html>
