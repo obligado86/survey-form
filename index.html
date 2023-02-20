@@ -12,25 +12,25 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
 </head>
-<body class="bg-secondary">
+<body>
 
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-12 col-md-7">
-				<h1 id="title" class="text-light mt-5 mb-5">Customer Survey Form</h1>
-				<p id="description" class="text-light mb-5">Thank you for shopping with us. Please take time and help us in improving our store and service.</p>
+				<h1 id="title" class="mt-5 mb-5">Customer Survey Form</h1>
+				<p id="description" class="mb-5">Thank you for shopping with us. Please take time and help us in improving our store and service.</p>
 				<form id="survey-form" action="mailto:contact@nowenastore.com" method="POST">
 					<fieldset>
-						<label id="name-label" for="name">Name</label> <br>
+						<label id="name-label" for="name" class="highlight text-light">Name</label> <br>
 						<input id="name" name="name" type="text" placeholder="Your name here" required class="w-100"> <br>
 						
-						<label id="email-label" for="email">Email</label> <br>
+						<label id="email-label" for="email" class="highlight text-light">Email</label> <br>
 						<input id="email" name="email" type="email" placeholder="email@sample.com" required class="w-100"> <br>
 						
-						<label id="number-label" for="number">Age</label> <br>
+						<label id="number-label" for="number" class="highlight text-light">Age</label> <br>
 						<input id="number" name="age" type="number" placeholder="18 and up only" min="18" max="120" required class="w-100">
 						
-						<p class="mt-4">Gender</p>
+						<p class="mt-4 highlight text-light">Gender</p>
 						
 						<input id="male" name="gender" type="radio" value="male" class="selection">
 						<label for="male">Male</label>
@@ -42,7 +42,7 @@
 						<label for="i-rather-not-say">I rather not say</label>
 					</fieldset>
 					<fieldset>
-						<p>Would you recommend our store a friend?</p>
+						<p class="highlight text-light">Would you recommend our store a friend?</p>
 						<label for="definitely">
 							<input id="definitely" name="recommendation" type="radio" value="definitely" class="selection">Definitely
 						</label>
@@ -52,39 +52,39 @@
 						<label for="not-sure">
 							<input id="not-sure" name="recommendation" type="radio" value="not-sure" class="selection">Not sure
 						</label>
-						<label for="most-like">What item category you mostly like from us?
-							<select id="dropdown" for="most-like" name="most-like">
-								<option value="">(select one)</option>
-								<option value="1">Home &amp; Living</option>
-								<option value="2">Clothing</option>
-								<option value="3">Shoes</option>
-								<option value="4">Kids</option>
-							</select>
-						</label>
-						<p>What part from our store would you see improved? (check all that apply)</p>
+						<label for="most-like" class="mt-4 highlight text-light">What item category you mostly like from us?</label>
+						<select id="dropdown" for="most-like" name="most-like" class="w-100">
+							<option value="" selected disabled>(select one)</option>
+							<option value="1">Home &amp; Living</option>
+							<option value="2">Clothing</option>
+							<option value="3">Shoes</option>
+							<option value="4">Kids</option>
+						</select>
+						
+						<p class="mt-4 highlight text-light">What part from our store would you see improved? (check all that apply)</p>
 						<label for="preffer">
 							<input id="preffer" value="Customer-service-response-time" type="checkbox" class="selection">Customer service response time
-						</label>
+						</label> <br>
 						<label for="preffer">
 							<input id="preffer" value="More-items-to-choose-from" type="checkbox" class="selection">More items to choose from
-						</label>
+						</label> <br>
 						<label for="preffer">
 							<input id="preffer" value="More-category-to-choose-from" type="checkbox" class="selection">More category to choose from
-						</label>
+						</label> <br>
 						<label for="preffer">
 							<input id="preffer" value="User-friendly-website" type="checkbox" class="selection">User friendly website
-						</label>
+						</label> <br>
 						<label for="preffer">
 							<input id="preffer" value="more-payment-option" type="checkbox" class="selection">more payment option
-						</label>
+						</label> <br>
 						<label for="preffer">
 							<input id="preffer" value="faster-shipping-option" type="checkbox" class="selection">faster shipping option
-						</label>
+						</label> <br>
 						<label for="preffer">
 							<input id="preffer" value="faster-processing-time" type="checkbox" class="selection">faster processing time
-						</label>
-						<label for="suggestions">Any comment or suggestion?
-							<textarea id="suggestions" name="suggestions" rows="3" cols="50" placeholder="enter your comments here..."></textarea>
+						</label> <br>
+						<label for="suggestions" class="highlight text-light">Any comment or suggestion?
+							<textarea id="suggestions" name="suggestions" rows="3" cols="50" placeholder="enter your comments here..." class="w-100"></textarea>
 						</label>
 					</fieldset>
 					<button id="submit" type="submit" onclick="showSuccessMessage()">Submit</button>
